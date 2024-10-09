@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{{ page.title }} | {{ site.title }}</title>
+
+        <!-- Icon Font -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+        <!-- Tailwind Config -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: {
+                                DEFAULT: 'hsl(var(--primary-h), var(--primary-s), var(--primary-l))',
+                                hover: 'var(--primary-hover)',
+                                content: 'var(--primary-content)',
+                            },
+                            secondary: {
+                                DEFAULT: 'hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l))',
+                                hover: 'var(--secondary-hover)',
+                                content: 'var(--secondary-content)',
+                            },
+                            accent: {
+                                DEFAULT: 'hsl(var(--accent-h), var(--accent-s), var(--accent-l))',
+                                hover: 'var(--accent-hover)',
+                                content: 'var(--accent-content)',
+                            },
+                        },
+                    },
+                },
+            }
+        </script>
+
+        <!-- Custom Styles -->
+        {% include custom-styles.html %}
+
+        <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
+    </head>
+    <body class="font-sans antialiased">
+
+        <!-- Navigation Bar -->
+        <nav class="bg-white shadow-lg">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <a href="/" class="text-xl font-bold text-primary">{{ site.title }}</a>
+                <ul class="flex space-x-4">
+                    <li><a href="/" class="text-gray-700 hover:text-primary">Home</a></li>
+                    <li><a href="/about" class="text-gray-700 hover:text-primary">About</a></li>
+                    <li><a href="/contact" class="text-gray-700 hover:text-primary">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <main class="">
+            {{ content }}
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-6">
+            <div class="container mx-auto text-center">
+                <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
