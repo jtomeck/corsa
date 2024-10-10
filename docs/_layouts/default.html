@@ -47,13 +47,24 @@
     <body class="font-sans text-gray-700 antialiased">
 
         <!-- Navigation Bar -->
-        <nav class="bg-white shadow-lg">
-            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-                <a href="/" class="text-xl font-bold text-primary">{{ site.title }}</a>
-                <ul class="flex space-x-4">
-                    <li><a href="/" class="text-gray-700 hover:text-primary">Home</a></li>
-                    <li><a href="/about" class="text-gray-700 hover:text-primary">About</a></li>
-                    <li><a href="/contact" class="text-gray-700 hover:text-primary">Contact</a></li>
+        <nav class="bg-white shadow-lg sticky top-0">
+            <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+                <a href="/" class="btn btn-ghost btn-lg btn-secondary text-xl font-bold !h-14">
+                    <img src="{{ site.baseurl }}/assets/img/corsa_logo.png" alt="" class="h-full w-auto">
+                    {{ site.title }}
+                </a>
+                <ul class="flex items-center space-x-2">
+                    <li>
+                        <a href="#about" class="btn btn-ghost">About</a>
+                    </li>
+                    <li>
+                        <a href="#key-components" class="btn btn-ghost">Key Components</a>
+                    </li>
+                    <li class="pl-2 border-l border-neutral-200">
+                        <a href="https://github.com/corsa-center" class="btn btn-ghost btn-icon btn-lg" target="_blank">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
