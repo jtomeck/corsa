@@ -4,7 +4,7 @@
             /* User-defined hex values */
             --primary: #0394C9;
             --secondary: #373F51;
-            --accent: #5FBB97;
+            --accent: #49AB86;
         }
 
         /* Typography Styles */
@@ -14,7 +14,7 @@
         h4,
         h5,
         h6 {
-            @apply font-bold;
+            @apply font-bold text-secondary;
         }
 
         h1 {
@@ -42,6 +42,14 @@
         }
     }
 
+    a {
+        @apply text-accent;
+    }
+
+    a:hover {
+        @apply underline;
+    }
+
     @layer components {
 
         /*
@@ -53,6 +61,10 @@
 
         .btn {
             @apply duration-200 ease-in-out inline-flex items-center justify-center px-3 py-[6px] rounded-md text-base tracking-wider transition-all gap-2 h-9;
+        }
+
+        .btn:hover {
+            @apply no-underline;
         }
 
         .btn i {
@@ -219,8 +231,20 @@
             color: #9ca3af !important; /* Tailwind's neutral-400 */
         }
 
+        /*
+        Hero
+        */
+
         .hero {
             @apply bg-gradient-to-br from-[#025979] to-primary;
+        }
+
+        /*
+        Cards
+        */
+
+        .card {
+            @apply bg-white rounded-lg shadow-lg p-6;
         }
     }
 </style>
