@@ -1,3 +1,4 @@
+// Function to convert HEX to HSL
 function hexToHSL(hex) {
     let r = 0, g = 0, b = 0;
     if (hex.length === 4) {
@@ -32,6 +33,7 @@ function hexToHSL(hex) {
     return { h, s, l };
 }
 
+// Function to set CSS variables dynamically based on HEX input
 function setColorVariables(hexVar, prefix) {
     const hex = getComputedStyle(document.documentElement).getPropertyValue(hexVar).trim();
     const { h, s, l } = hexToHSL(hex);
@@ -46,6 +48,7 @@ function setColorVariables(hexVar, prefix) {
     return styles;
 }
 
+// Function to inject dynamic color styles into the document
 function injectStyles() {
     const primaryStyles = setColorVariables('--primary', 'primary');
     const secondaryStyles = setColorVariables('--secondary', 'secondary');
@@ -62,4 +65,29 @@ function injectStyles() {
     styleElement.textContent = `:root { ${primaryStyles} ${secondaryStyles} ${accentStyles} }`;
 }
 
+// Call to inject dynamic styles on load
 injectStyles();
+
+// Function to toggle the navigation menu and icon
+function setupNavToggle() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+
+    hamburger.addEventListener('click', () => {
+        // Toggle navigation visibility
+        navLinks.classList.toggle('hidden');
+
+        // Toggle between the hamburger and close icons
+        if (hamburgerIcon.classList.contains('ri-menu-line')) {
+            hamburgerIcon.classList.remove('ri-menu-line');
+            hamburgerIcon.classList.add('ri-close-line');
+        } else {
+            hamburgerIcon.classList.remove('ri-close-line');
+            hamburgerIcon.classList.add('ri-menu-line');
+        }
+    });
+}
+
+// Initialize navigation toggle
+setupNavToggle();

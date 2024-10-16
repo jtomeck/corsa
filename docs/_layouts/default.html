@@ -47,27 +47,34 @@
     <body class="font-sans text-gray-700 antialiased">
 
         <!-- Navigation Bar -->
-        <nav class="bg-white shadow-lg sticky top-0 z-[999]">
-            <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-                <a href="/" class="btn btn-ghost btn-lg btn-secondary !text-2xl font-bold !h-14">
-                    <!--<img src="{{ site.baseurl }}/assets/img/corsa_logo.png" alt="" class="h-full w-auto">-->
+        <nav class="bg-white shadow-lg sticky top-0 z-[997]">
+            <div class="container mx-auto px-4 py-2 flex justify-between items-center relative">
+                <a href="{{ site.baseurl }}/" class="btn btn-ghost btn-lg btn-secondary !text-2xl font-bold !h-14">
                     {{ site.title }}
                 </a>
-                <div class="flex items-center space-x-2">
-                        <a href="#about" class="btn btn-ghost">About</a>
-                        <a href="#key-components" class="btn btn-ghost">Key Components</a>
-                        <a href="#foundations" class="btn btn-ghost">Foundations</a>
-                        <a href="#benefits" class="btn btn-ghost">Benefits</a>
-                        <a href="#funding-opportunities" class="btn btn-ghost">Funding Opportunities</a>
-                        <a href="#resources" class="btn btn-ghost">Resources</a>
-                        <span class="pl-2 border-l border-neutral-200">
-                            <a href="https://github.com/corsa-center" class="btn btn-ghost btn-icon btn-lg" target="_blank">
-                                <i class="ri-github-fill"></i>
-                            </a>
-                        </span>
+
+                <!-- Hamburger Menu (Checkbox Hack) -->
+                <div id="hamburger" class="block xl:hidden text-2xl cursor-pointer focus:outline-none z-[999]">
+                    <i id="hamburger-icon" class="ri-menu-line"></i>
+                </div>
+
+                <!-- Navigation Links -->
+                <div id="nav-links" class="fixed bg-white left-0 right-0 top-0 bottom-0 z-[998] flex flex-col items-center space-y-2 mt-4 xl:static xl:flex xl:flex-row xl:space-y-0 xl:space-x-4 xl:mt-0 hidden">
+                    <a href="#about" class="btn btn-ghost">About</a>
+                    <a href="#key-components" class="btn btn-ghost">Key Components</a>
+                    <a href="#foundations" class="btn btn-ghost">Foundations</a>
+                    <a href="#benefits" class="btn btn-ghost">Benefits</a>
+                    <a href="#funding-opportunities" class="btn btn-ghost">Funding Opportunities</a>
+                    <a href="#resources" class="btn btn-ghost">Resources</a>
+                    <span class="xl:pl-2 xl:border-l xl:border-neutral-200">
+                        <a href="https://github.com/corsa-center" class="btn btn-ghost btn-icon btn-lg" target="_blank">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                    </span>
                 </div>
             </div>
         </nav>
+
 
         <!-- Page Content -->
         <main class="">

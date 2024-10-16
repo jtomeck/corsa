@@ -1,6 +1,111 @@
 ---
 layout: default
 title: Home
+
+# HERO SECTION
+# Main Hero Content
+main_headline: The Center for Open-Source Research Software Stewardship and Advancement (CORSA)
+sub_headline: CORSA is a community of practice dedicated to software sustainability for scientific and research software projects.
+
+# Hero Subscribe Form
+form_heading: Join the CORSA community
+form_text: Please subscribe to our mailing list to be kept informed of events, funding opportunities, and other activities that will help sustain your project!
+
+# ABOUT SECTION
+about_heading: About CORSA
+about_items:
+  - title: Mission
+    content: To promote sustainable practices in the research software community and support the development, maintenance, and long-term viability of research software.
+  - title: Vision
+    content: The Center for Open-Source Research Software Stewardship and Advancement (CORSA) serves as a community of practice that enables pathways for open-source scientific software projects to avail themselves of resources for long-term growth, stewardship, advancement, and innovation.
+  - title: Community
+    content: Our community comprises any open source scientific and research software projects interested in sustainablity and pathways to foundations. We are founding members of the <a href="https://cass.community">Consortium for the Advancement of Scientific Software (CASS)</a>.
+
+# KEY COMPONENTS SECTION
+keycomp_heading: Key Components
+keycomp_items:
+  - title: Pathways to Foundations
+    content: Assisting the research software ecosystem to avail the resources and community structure of open source software foundations.
+    button_link: "#foundations"
+    button_text: Learn about foundations
+  - title: Software Sustainability Metrics
+    content: Curating metrics that enable software projects to better understand and improve their sustainability. As part of this we identify software sustainability metrics frameworks and a set of tools that can enable projects to collect and analyze metrics specific to their software.
+
+# FOUNDATIONS SECTION
+foundations_heading: Foundations
+foundations_subtext: Need help choosing a foundation? Click on the links below to find out more about each foundation and what it takes to apply and join.
+foundation_items:
+  - name: NumFOCUS
+    content: "The mission of NumFOCUS is to promote open practices in research, data, and scientific computing by serving as a fiscal sponsor for open source projects and organizing community-driven educational programs."
+    button_link: /foundations/numfocus.html
+    button_text: Learn more
+  - name: High Performance Software Foundation (HPSF)
+    content: "HPSF is an open-source, vendor neutral hub for high performance software projects working groups, events, and training."
+    button_link: /foundations/hpsf.html
+    button_text: Learn more
+  - name: Apache Software Foundation
+    content: "The ASF exists to provide software for the public good. We believe in the power of community over code, known as The Apache Way. Thousands of people around the world contribute to ASF open source projects every day."
+    button_text: Coming soon
+    disable_button: true
+  - name: Eclipse
+    content: "The Eclipse Foundation provides our global community of individuals and organizations with a business-friendly environment for open source software collaboration and innovation."
+    button_text: Coming soon
+    disable_button: true
+    
+
+# BENEFITS SECTION
+benefits_heading: Benefits
+benefits_subtext: Are you wondering what the benefits of joining an open source foundation are? Here is a list of some of the things to gain from joining a foundation.
+benefit_types:
+  - title: Benefits for Projects
+    benefit_list:
+      - Comprehensive support for sustainable research software development
+      - Improved software sustainability and maintainability
+      - Enhanced skills and knowledge through education and training
+      - Guidance and consultation on sustainability practices
+      - Access to funding opportunities
+  - title: Benefits for Funding Entities
+    benefit_list:
+      - Alignment with sustainable development goals
+      - Increased impact of funding through collaboration
+      - Streamlined project selection based on sustainability criteria
+      - Diverse funding opportunities
+      - Collaboration and knowledge sharing within the research software community
+
+# OPEN SOURCE FUNDING OPPORTUNITIES SECTION
+fundingopp_heading: Open Source Software Funding Opportunities
+fundingopp_subtext: Foundations are not the only option for supporting your project. Here are some other options that you may want to consider.
+funding_opportunities:
+  - name: National Institute of Health (NIH)
+    content: The <a href="https://www.nih.gov/">NIH</a> has current open funding opportunities for <a href="https://grants.nih.gov/grants/guide/rfa-files/RFA-OD-24-010.html">Building Sustainable Software Tools for Open Science</a> and <a href="https://grants.nih.gov/grants/guide/rfa-files/RFA-OD-24-011.html">NIH Research Software Engineer (RSE) Award</a> These are two-year awards with a maximum funding of $300K per award. The RSE award application must also include a letter of support from an NIH-funded project PI.
+  - name: US National Science Foundation (NSF)
+    content: The <a href="https://www.nsf.gov/">NSF</a> has current open funding opportunities for the <a href="https://www.nsf.gov/pubs/2024/nsf24109/nsf24109.pdf?WT.mc_ev=click&amp;WT.mc_id=&amp;utm_medium=email&amp;utm_source=govdelivery">National Artificial Intelligence Research Resource (NAIRR) Pilot</a>.
+  - name: Research Software Alliance (ReSA)
+    content: <a href="https://www.researchsoft.org">ReSA</a> maintains a <a href="https://www.researchsoft.org/funding-opportunities/">list of funding opportunities for research software projects</a>.
+
+# RESOURCES SECTION
+resources_heading: Resources
+resource_types:
+  - title: Best Practices
+    resource_list:
+      - title: Open Source Project Guides
+        url: "https://github.com/corsa-center/oss-documents/blob/main/README.md"
+  - title: Foundations
+    resource_list:
+      - title: Benefits of joining a foundation
+        url: /foundations/benefits.html
+        internal_url: true
+      - title: NumFOCUS
+        url: /foundations/numfocus.html
+        internal_url: true
+      - title: High Performance Software Foundation (HPSF)
+        url: /foundations/hpsf.html
+        internal_url: true
+  - title: Working Groups
+    resource_list:
+      - title: CASS Metrics Working Group
+        url: /meetings/metrics-wg.html
+        internal_url: true
 ---
 
 <!-- Hero Section -->
@@ -8,19 +113,15 @@ title: Home
   <div class="container mx-auto py-8">
     <div class="grid lg:grid-cols-12 px-8">
       <div class="lg:px-12 xl:px-28 pb-12 lg:pt-12 lg:col-span-9 text-white">
-        <h1 class="text-5xl font-light mb-4 text-white">The Center for Open-Source Research Software
-          Stewardship and Advancement (CORSA)</h1>
-        <p class="text-2xl font-normal">CORSA is a community of practice dedicated to software
-          sustainability for scientific and research software projects.</p>
+        <h1 class="text-5xl font-light mb-4 text-white">{{ page.main_headline }}</h1>
+        <p class="text-2xl font-normal">{{ page.sub_headline }}</p>
       </div>
       <div class="bg-white rounded-md lg:col-span-3 p-6">
         <div class="pb-6">
-          <h3 class="mb-2">Join the CORSA community</h3>
-          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque ex id
-            tortor convallis vulputate.</p>
+          <h3 class="mb-2">{{ page.form_heading }}</h3>
+          <p class="mb-0">{{ page.form_text }}</p>
         </div>
-        <hr>
-        <form class="pt-6 space-y-4" action>
+        <form class="pt-3 space-y-4" action="">
           <input
             class="bg-white border border-neutral-200 rounded-md w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary focus:ring-offset-15"
             type="email" placeholder="email@example.com">
@@ -34,72 +135,44 @@ title: Home
 <section id="about" class="py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
   <div class="container mx-auto px-4">
     <div class="max-w-[720px] mx-auto text-center pb-12">
-      <h2 class="mb-2">About CORSA</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque ex id tortor
-        convallis vulputate.</p>
+      <h2 class="mb-2">{{ page.about_heading }}</h2>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
+      {% for about_item in page.about_items %}
       <div class="card p-6">
         <div class="card-body">
-          <h3 class="text-xl font-semibold mb-3">Mission</h3>
-          <p>To promote sustainable practices in the research software community and support the
-            development, maintenance, and long-term viability of research software.</p>
+          <h3 class="text-xl font-semibold mb-3">{{ about_item.title }}</h3>
+          <p>{{ about_item.content }}</p>
         </div>
       </div>
+      {% endfor %}
 
-      <div class="card p-6">
-        <div class="card-body">
-          <h3 class="text-xl font-semibold mb-3">Vision</h3>
-          <p>The Center for Open-Source Research Software Stewardship and Advancement (CORSA) serves
-            as a community of practice that enables pathways for open-source scientific software
-            projects to avail themselves of resources for long-term growth, stewardship,
-            advancement, and innovation.</p>
-        </div>
-      </div>
-
-      <div class="card p-6">
-        <div class="card-body">
-          <h3 class="text-xl font-semibold mb-3">Community</h3>
-          <p>Our community comprises any open source scientific and research software projects
-            interested in sustainablity and pathways to foundations. We are founding members of the
-            <a href="https://cass.community">Consortium for the Advancement of Scientific Software
-              (CASS)</a>.</p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
 <section id="key-components" class="py-12 lg:py-16">
   <div class="container mx-auto px-4">
     <div class="max-w-720 mx-auto text-center mb-12">
-      <h2 class="mb-2">Key Components</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque ex id tortor
-        convallis vulputate.</p>
+      <h2 class="mb-2">{{ page.keycomp_heading }}</h2>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:px-36">
 
+      {% assign i = 0 %}
+      {% for key_component in page.keycomp_items %}
       <div class="p-6 relative flex space-x-6">
-        <p class="text-7xl font-bold text-gray-200">1</p>
+        {% assign i = i | plus:1 %}
+        <p class="text-7xl font-bold text-gray-200">{{ i }}</p>
         <div>
-          <h3 class="text-xl font-semibold mb-2">Pathways to Foundations</h3>
-          <p>Assisting the research software ecosystem to avail the resources and community
-            structure of open source software foundations.</p>
-          <a href="#foundations" class="btn btn-primary mt-6">Learn about foundations</a>
+          <h3 class="text-xl font-semibold mb-2">{{ key_component.title }}</h3>
+          <p>{{ key_component.content}}</p>
+          {% if key_component.button_link %}
+            <a href="{{ key_component.button_link }}" class="btn btn-primary mt-6">{{ key_component.button_text }}</a>
+          {% endif %}
         </div>
       </div>
+      {% endfor %}
 
-      <div class="p-6 relative flex space-x-6">
-        <p class="text-7xl font-bold text-gray-200">2</p>
-        <div>
-          <h3 class="text-xl font-semibold mb-2">Software Sustainability Metrics</h3>
-          <p>Curating metrics that enable software projects to better understand and improve their
-            sustainability. As part of this we identify software sustainability metrics frameworks
-            and a set of tools that can enable projects to collect and analyze metrics specific to
-            their software.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -107,51 +180,22 @@ title: Home
 <section id="foundations" class="py-12 lg:py-16 bg-gradient-to-br from-secondary to-primary">
   <div class="container mx-auto px-4">
     <div class="max-w-720 mx-auto text-center pb-12 text-white">
-      <h2 class="mb-2 text-white">Foundations</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque ex id tortor
-        convallis vulputate.</p>
+      <h2 class="mb-2 text-white">{{ page.foundations_heading }}</h2>
+      <p>{{ page.foundations_subtext }}</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
 
+      {% for foundation_item in page.foundation_items %}
       <div class="card">
         <div class="card-body flex flex-col h-full">
           <div class="grow">
-            <h3 class="mb-4">NumFOCUS</h3>
-            <p>The mission of NumFOCUS is to promote open practices in research, data, and scientific computing by serving as a fiscal sponsor for open source projects and organizing community-driven educational programs.</p>
+            <h3 class="mb-4">{{ foundation_item.name }}</h3>
+            <p>{{ foundation_item.content}}</p>
           </div>
-          <a href="{{ site.baseurl }}/numfocus.html" class="btn btn-accent btn-lg mt-3 w-full">Learn more</a>
+          <a href="{{ site.baseurl }}{{ foundation_item.button_link }}" class="btn {% if foundation_item.disable_button == true %}btn-disabled{% else %}btn-accent{% endif %} btn-lg mt-3 w-full">{{ foundation_item.button_text }}</a>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card-body flex flex-col h-full">
-          <div class="grow">
-            <h3 class="mb-4">High Performance Software Foundation (HPSF)</h3>
-            <p>HPSF is an open-source, vendor neutral hub for high performance software projects, working groups, events, and training.</p>
-          </div>
-          <a href="{{ site.baseurl }}/hpsf.html" class="btn btn-accent btn-lg mt-3 w-full">Learn more</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body flex flex-col h-full">
-          <div class="grow">
-          <h3 class="mb-4">Apache Software Foundation</h3>
-            <p>The ASF exists to provide software for the public good. We believe in the power of community over code, known as The Apache Way. Thousands of people around the world contribute to ASF open source projects every day.</p>
-          </div>
-          <a href="#" class="btn btn-disabled btn-lg mt-3 w-full">Coming Soon</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body flex flex-col h-full">
-          <div class="grow">
-            <h3 class="mb-4">Eclipse</h3>
-            <p>The Eclipse Foundation provides our global community of individuals and organisations with a business-friendly environment for open source software collaboration and innovation.</p>
-          </div>
-          <a href="#" class="btn btn-disabled btn-lg mt-3 w-full">Coming Soon</a>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
   </div>
@@ -160,37 +204,23 @@ title: Home
 <section id="benefits" class="py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
   <div class="container mx-auto px-4">
     <div class="max-w-720 mx-auto text-center pb-12">
-      <h2 class="mb-2">Benefits</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque ex id tortor
-        convallis vulputate.</p>
+      <h2 class="mb-2">{{ page.benefits_heading }}</h2>
+      <p>{{ page.benefits_subtext }}</p>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:px-36">
 
+      {% for type in page.benefit_types %}
       <div class="card p-0 border-t-8 border-accent">
         <div class="card-body">
-          <h3 class="text-xl font-semibold p-6">Benefits for Projects</h3>
+          <h3 class="text-xl font-semibold p-6">{{ type.title }}</h3>
           <ol class="list border-t border-gray-200 !list-inside !p-0">
-            <li class="border-b border-gray-200 px-6 py-3">Comprehensive support for sustainable research software development</li>
-            <li class="border-b border-gray-200 px-6 py-3">Improved software sustainability and maintainability</li>
-            <li class="border-b border-gray-200 px-6 py-3">Enhanced skills and knowledge through education and training</li>
-            <li class="border-b border-gray-200 px-6 py-3">Guidance and consultation on sustainability practices</li>
-            <li class="border-b border-gray-200 px-6 py-3">Access to funding opportunities</li>
+            {% for item in type.benefit_list %}
+              <li class="border-b border-gray-200 px-6 py-3">{{ item }}</li>
+            {% endfor %}
           </ol>
         </div>
       </div>
-
-      <div class="card p-0 border-t-8 border-accent">
-        <div class="card-body">
-          <h3 class="text-xl font-semibold p-6">Benefits for Funding Entities</h3>
-          <ol class="list border-t border-gray-200 !list-inside !p-0">
-            <li class="border-b border-gray-200 px-6 py-3">Alignment with sustainable development goals</li>
-            <li class="border-b border-gray-200 px-6 py-3">Increased impact of funding through collaboration</li>
-            <li class="border-b border-gray-200 px-6 py-3">Streamlined project selection based on sustainability criteria</li>
-            <li class="border-b border-gray-200 px-6 py-3">Diverse funding opportunities</li>
-            <li class="border-b border-gray-200 px-6 py-3">Collaboration and knowledge sharing within the research software community</li>
-          </ol>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
   </div>
@@ -199,37 +229,23 @@ title: Home
 <section id="funding-opportunities" class="py-12 lg:py-16">
   <div class="container mx-auto px-4">
     <div class="max-w-720 mx-auto text-center mb-12">
-      <h2 class="mb-2">Open Source Software Funding Opportunities</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque ex id tortor
-        convallis vulputate.</p>
+      <h2 class="mb-2">{{ page.fundingopp_heading }}</h2>
+      <p>{{ page.fundingopp_subtext }}</p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
+      {% assign n = 0 %}
+      {% for opportunity in page.funding_opportunities %}
       <div class="p-6 relative flex space-x-6">
-        <p class="text-7xl font-bold text-gray-200">1</p>
+        {% assign n = n | plus:1 %}
+        <p class="text-7xl font-bold text-gray-200">{{ n }}</p>
         <div>
-          <h3 class="text-xl font-semibold mb-2">National Institute of Health (NIH)</h3>
-          <p>The <a href="https://www.nih.gov/">NIH</a> has current open funding opportunities for <a href="https://grants.nih.gov/grants/guide/rfa-files/RFA-OD-24-010.html">Building Sustainable Software Tools for Open Science</a> and <a href="https://grants.nih.gov/grants/guide/rfa-files/RFA-OD-24-011.html">NIH Research Software Engineer (RSE) Award</a> These are two-year awards with a maximum funding of $300K per award. The RSE award application must also include a letter of support from an NIH-funded project PI.</p>
+          <h3 class="text-xl font-semibold mb-2">{{ opportunity.name }}</h3>
+          <p>{{ opportunity.content}}</p>
         </div>
       </div>
-
-      <div class="p-6 relative flex space-x-6">
-        <p class="text-7xl font-bold text-gray-200">2</p>
-        <div>
-          <h3 class="text-xl font-semibold mb-2">US National Science Foundation (NSF)</h3>
-          <p>The <a href="https://www.nsf.gov/">NSF</a> has current open funding opportunities for the <a href="https://www.nsf.gov/pubs/2024/nsf24109/nsf24109.pdf?WT.mc_ev=click&amp;WT.mc_id=&amp;utm_medium=email&amp;utm_source=govdelivery">National Artificial Intelligence Research Resource (NAIRR) Pilot</a>.</p>
-        </div>
-      </div>
-
-      <div class="p-6 relative flex space-x-6">
-        <p class="text-7xl font-bold text-gray-200">3</p>
-        <div>
-          <h3 class="text-xl font-semibold mb-2">Research Software Alliance (ReSA)</h3>
-          <p><a href="https://www.researchsoft.org">ReSA</a> maintains a <a href="https://www.researchsoft.org/funding-opportunities/">list of funding opportunities for research software projects</a>.</p>
-        </div>
-      </div>
-    </div>
+      {% endfor %}
 
   </div>
 </section>
@@ -237,57 +253,27 @@ title: Home
 <section id="resources" class="py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
   <div class="container mx-auto px-4">
     <div class="max-w-720 mx-auto text-center pb-12">
-      <h2 class="mb-2">Resources</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque ex id tortor
-        convallis vulputate.</p>
+      <h2 class="mb-2">{{ page.resources_heading }}</h2>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
+      {% for type in page.resource_types %}
       <div class="card p-0 border-t-8 border-primary">
         <div class="card-body">
-          <h3 class="text-xl font-semibold p-6">Best Practices</h3>
+          <h3 class="text-xl font-semibold p-6">{{ type.title }}</h3>
           <ul class="list border-t border-gray-200 !list-inside !p-0">
-            <li class="border-b border-gray-200 px-6 py-3"><a href="https://github.com/corsa-center/oss-documents/blob/main/README.md" class="text-primary">Open Source Project Guides</a></li>
+            {% for item in type.resource_list %}
+              {% if item.internal_url == true %}
+                <li class="border-b border-gray-200 px-6 py-3"><a href="{{ site.baseurl }}{{ item.url }}" class="text-primary">{{ item.title }}</a></li>
+              {% else %}
+                <li class="border-b border-gray-200 px-6 py-3"><a href="{{ item.url }}" class="text-primary">{{ item.title }}</a></li>
+              {% endif %}
+            {% endfor %}
           </ul>
         </div>
       </div>
-
-      <div class="card p-0 border-t-8 border-primary">
-        <div class="card-body">
-          <h3 class="text-xl font-semibold p-6">Foundations</h3>
-          <ul class="list border-t border-gray-200 !list-inside !p-0">
-            <li class="border-b border-gray-200 px-6 py-3"><a href="foundations/benefits.html" class="text-primary">Benefits of joining a foundation</a></li>
-            <li class="border-b border-gray-200 px-6 py-3"><a href="foundations/numfocus.html" class="text-primary">NumFOCUS</a></li>
-            <li class="border-b border-gray-200 px-6 py-3"><a href="foundations/hpsf.html" class="text-primary">High Performance Software Foundation (HPSF)</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card p-0 border-t-8 border-primary">
-        <div class="card-body">
-          <h3 class="text-xl font-semibold p-6">Working Groups</h3>
-          <ul class="list border-t border-gray-200 !list-inside !p-0">
-            <li class="border-b border-gray-200 px-6 py-3"><a href="https://corsa.center/meetings/metrics-wg.html" class="text-primary">CASS Metrics Working Group</a></li>
-          </ul>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
-  </div>
-</section>
-
-<section class="bg-gradient-to-br from-secondary to-[#292F3D]">
-  <div class="container mx-auto px-4 text-white py-12 text-center max-w-[720px]">
-    <div class="mb-6">
-      <h1 class="font-light text-5xl text-white mb-4">Get Involved</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque ex id tortor
-        convallis vulputate.</p>
-    </div>
-    <form class="pt-6 space-y-4" action>
-      <input
-        class="bg-white border border-neutral-200 rounded-md w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary focus:ring-offset-15"
-        type="email" placeholder="email@example.com">
-      <button type="submit" class="btn btn-primary btn-lg block w-full">Submit</button>
-    </form>
   </div>
 </section>

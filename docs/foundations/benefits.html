@@ -1,6 +1,6 @@
 ---
 layout: default
-title: NumFOCUS
+title: Benefits of Joining a Foundation
 ---
 
 <!-- Hero Section -->
@@ -8,7 +8,7 @@ title: NumFOCUS
     <div class="container mx-auto py-8">
         <div class="px-8">
         <div class="text-white">
-            <h1 class="font-light text-white">NumFOCUS - How to Apply and Join</h1>
+            <h1 class="font-light text-white">{{ page.title }}</h1>
         </div>
         </div>
     </div>
@@ -16,7 +16,7 @@ title: NumFOCUS
 
 <div>
     <div class="container mx-auto py-8 px-8">
-        {% capture numfocus_content %}{% include numfocus-content.markdown %}{% endcapture %}
-        {{ numfocus_content | markdownify }}
+        {% capture foundation_benefits_content %}{% include foundation-benefits-content.markdown %}{% endcapture %}
+        {{ foundation_benefits_content | markdownify }}
     </div>
 </div>
