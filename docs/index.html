@@ -39,18 +39,24 @@ foundation_items:
     content: "The mission of NumFOCUS is to promote open practices in research, data, and scientific computing by serving as a fiscal sponsor for open source projects and organizing community-driven educational programs."
     button_link: /foundations/numfocus.html
     button_text: Learn more
+    internal_url: true
   - name: High Performance Software Foundation (HPSF)
     content: "HPSF is an open-source, vendor neutral hub for high performance software projects working groups, events, and training."
     button_link: /foundations/hpsf.html
     button_text: Learn more
+    internal_url: true
   - name: Apache Software Foundation
     content: "The ASF exists to provide software for the public good. We believe in the power of community over code, known as The Apache Way. Thousands of people around the world contribute to ASF open source projects every day."
-    button_text: Coming soon
-    disable_button: true
+    button_link: "https://www.apache.org/"
+    button_text: Learn more
+    disable_button: false
+    internal_url: false
   - name: Eclipse
     content: "The Eclipse Foundation provides our global community of individuals and organizations with a business-friendly environment for open source software collaboration and innovation."
-    button_text: Coming soon
-    disable_button: true
+    button_link: "https://www.eclipse.org/"
+    button_text: Learn more
+    disable_button: false
+    internal_url: false
     
 
 # BENEFITS SECTION
@@ -108,172 +114,16 @@ resource_types:
         internal_url: true
 ---
 
-<!-- Hero Section -->
-<section class="hero bg-primary">
-  <div class="container mx-auto py-8">
-    <div class="grid lg:grid-cols-12 px-8">
-      <div class="lg:px-12 xl:px-28 pb-12 lg:pt-12 lg:col-span-9 text-white">
-        <h1 class="text-5xl font-light mb-4 text-white">{{ page.main_headline }}</h1>
-        <p class="text-2xl font-normal">{{ page.sub_headline }}</p>
-      </div>
-      <div class="bg-white rounded-md lg:col-span-3 p-6">
-        <div class="pb-6">
-          <h3 class="mb-2">{{ page.form_heading }}</h3>
-          <p class="mb-0">{{ page.form_text }}</p>
-        </div>
-        <form class="pt-3 space-y-4" action="">
-          <input
-            class="bg-white border border-neutral-200 rounded-md w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary focus:ring-offset-15"
-            type="email" placeholder="email@example.com">
-          <button type="submit" class="btn btn-secondary btn-lg block w-full">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+{% include home-sections/hero.html %}
 
-<section id="about" class="py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
-  <div class="container mx-auto px-4">
-    <div class="max-w-[720px] mx-auto text-center pb-12">
-      <h2 class="mb-2">{{ page.about_heading }}</h2>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+{% include home-sections/about.html %}
 
-      {% for about_item in page.about_items %}
-      <div class="card p-6">
-        <div class="card-body">
-          <h3 class="text-xl font-semibold mb-3">{{ about_item.title }}</h3>
-          <p>{{ about_item.content }}</p>
-        </div>
-      </div>
-      {% endfor %}
+{% include home-sections/key-components.html %}
 
-  </div>
-</section>
+{% include home-sections/foundations.html %}
 
-<section id="key-components" class="py-12 lg:py-16">
-  <div class="container mx-auto px-4">
-    <div class="max-w-720 mx-auto text-center mb-12">
-      <h2 class="mb-2">{{ page.keycomp_heading }}</h2>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:px-36">
+{% include home-sections/benefits.html %}
 
-      {% assign i = 0 %}
-      {% for key_component in page.keycomp_items %}
-      <div class="p-6 relative flex space-x-6">
-        {% assign i = i | plus:1 %}
-        <p class="text-7xl font-bold text-gray-200">{{ i }}</p>
-        <div>
-          <h3 class="text-xl font-semibold mb-2">{{ key_component.title }}</h3>
-          <p>{{ key_component.content}}</p>
-          {% if key_component.button_link %}
-            <a href="{{ key_component.button_link }}" class="btn btn-primary mt-6">{{ key_component.button_text }}</a>
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
+{% include home-sections/funding-opportunities.html %}
 
-    </div>
-  </div>
-</section>
-
-<section id="foundations" class="py-12 lg:py-16 bg-gradient-to-br from-secondary to-primary">
-  <div class="container mx-auto px-4">
-    <div class="max-w-720 mx-auto text-center pb-12 text-white">
-      <h2 class="mb-2 text-white">{{ page.foundations_heading }}</h2>
-      <p>{{ page.foundations_subtext }}</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-
-      {% for foundation_item in page.foundation_items %}
-      <div class="card">
-        <div class="card-body flex flex-col h-full">
-          <div class="grow">
-            <h3 class="mb-4">{{ foundation_item.name }}</h3>
-            <p>{{ foundation_item.content}}</p>
-          </div>
-          <a href="{{ site.baseurl }}{{ foundation_item.button_link }}" class="btn {% if foundation_item.disable_button == true %}btn-disabled{% else %}btn-accent{% endif %} btn-lg mt-3 w-full">{{ foundation_item.button_text }}</a>
-        </div>
-      </div>
-      {% endfor %}
-
-    </div>
-  </div>
-</section>
-
-<section id="benefits" class="py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
-  <div class="container mx-auto px-4">
-    <div class="max-w-720 mx-auto text-center pb-12">
-      <h2 class="mb-2">{{ page.benefits_heading }}</h2>
-      <p>{{ page.benefits_subtext }}</p>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:px-36">
-
-      {% for type in page.benefit_types %}
-      <div class="card p-0 border-t-8 border-accent">
-        <div class="card-body">
-          <h3 class="text-xl font-semibold p-6">{{ type.title }}</h3>
-          <ol class="list border-t border-gray-200 !list-inside !p-0">
-            {% for item in type.benefit_list %}
-              <li class="border-b border-gray-200 px-6 py-3">{{ item }}</li>
-            {% endfor %}
-          </ol>
-        </div>
-      </div>
-      {% endfor %}
-
-    </div>
-  </div>
-</section>
-
-<section id="funding-opportunities" class="py-12 lg:py-16">
-  <div class="container mx-auto px-4">
-    <div class="max-w-720 mx-auto text-center mb-12">
-      <h2 class="mb-2">{{ page.fundingopp_heading }}</h2>
-      <p>{{ page.fundingopp_subtext }}</p>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-      {% assign n = 0 %}
-      {% for opportunity in page.funding_opportunities %}
-      <div class="p-6 relative flex space-x-6">
-        {% assign n = n | plus:1 %}
-        <p class="text-7xl font-bold text-gray-200">{{ n }}</p>
-        <div>
-          <h3 class="text-xl font-semibold mb-2">{{ opportunity.name }}</h3>
-          <p>{{ opportunity.content}}</p>
-        </div>
-      </div>
-      {% endfor %}
-
-  </div>
-</section>
-
-<section id="resources" class="py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
-  <div class="container mx-auto px-4">
-    <div class="max-w-720 mx-auto text-center pb-12">
-      <h2 class="mb-2">{{ page.resources_heading }}</h2>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-      {% for type in page.resource_types %}
-      <div class="card p-0 border-t-8 border-primary">
-        <div class="card-body">
-          <h3 class="text-xl font-semibold p-6">{{ type.title }}</h3>
-          <ul class="list border-t border-gray-200 !list-inside !p-0">
-            {% for item in type.resource_list %}
-              {% if item.internal_url == true %}
-                <li class="border-b border-gray-200 px-6 py-3"><a href="{{ site.baseurl }}{{ item.url }}" class="text-primary">{{ item.title }}</a></li>
-              {% else %}
-                <li class="border-b border-gray-200 px-6 py-3"><a href="{{ item.url }}" class="text-primary">{{ item.title }}</a></li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-      {% endfor %}
-
-    </div>
-  </div>
-</section>
+{% include home-sections/resources.html %}
